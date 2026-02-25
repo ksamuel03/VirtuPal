@@ -1,6 +1,6 @@
-console.log("DuoGotchi Node app running 🐣");
+console.log("VirtuPal Node app running 🐣");
 
 setTimeout(() => {
     const title = document.querySelector("h1");
-    title.textContent = "DuoGotchi is ready to grow 🌱";
+    title.textContent = "Your VirtuPal is ready to grow 🌱";
 }, 2000);

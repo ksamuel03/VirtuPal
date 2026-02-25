@@ -4,10 +4,10 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// Tell Express to serve static files from "public" folder
+//tell Express to show all files inside the "public" folder
 app.use(express.static(path.join(__dirname, "public")));
 
-// Start server
+//starts the server
 app.listen(PORT, () => {
-  console.log(`DuoGotchi is running at http://localhost:${PORT} 🐣`);
+  console.log(`VirtuPal is running at http://localhost:${PORT} 🐣`);
 });

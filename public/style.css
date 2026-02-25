@@ -1,34 +1,172 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #105666;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #F7F4D5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #003049; /* Deep navy */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container {
-    padding: 30px;
-    border-radius: 20px;
-    width: 380px;
-    text-align: center;
-    border: 3px solid #D3968C;
-    box-shadow: 0 0 25px rgba(211, 150, 140, 0.4);
+.room {
+  width: 400px;
+  height: 700px;
+  background-color: #EAE2B7; /* Cream */
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-h1 {
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+/* Window */
+.window {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#FCBF49, #87ceeb);
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid #003049;
+  border-radius: 10px;
 }
 
-p {
-    font-size: 14px;
-    line-height: 1.6;
+.window-cross {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.window-cross::before,
+.window-cross::after {
+  content: "";
+  position: absolute;
+  background-color: #003049;
+}
+
+.window-cross::before {
+  width: 100%;
+  height: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.window-cross::after {
+  height: 100%;
+  width: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Level Box */
+.level-box {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  background-color: #EAE2B7;
+  border: 3px solid #F77F00;
+  color: #003049; 
+  padding: 10px;
+  border-radius: 15px;
+  width: 130px; /* small box */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Horizontal level + bar */
+.level-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* space between LV text and bar */
+}
+
+.level-stats p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* EXP bar */
+.exp-bar {
+  width: 60px; /* fixed width keeps box small */
+  height: 10px;
+  background-color: #FCBF49;
+  border-radius: 10px;
+  margin: 0;
+}
+
+/* Carpet */
+.carpet {
+  width: 200px;
+  height: 100px;
+  background-color: #D62828;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-box {
+  width: 60px;
+  height: 60px;
+  background-color: #F77F00;
+  border-radius: 15px;
+}
+
+/* Tighten spacing for the text below the EXP bar */
+.level-box > p {
+  margin: 0;          /* Remove default paragraph spacing */
+  font-size: 12px;    /* Optional smaller font for neatness */
+}
+
+/* LV 0 and EXP bar side by side */
+.level-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;           /* space between LV text and bar */
+}
+
+.level-stats p {
+  margin: 0;           /* remove default spacing */
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  color: #003049;
+}
+
+/* EXP bar */
+.exp-bar {
+  width: 60px;
+  height: 10px;
+  background-color: #FCBF49;
+  border-radius: 10px;
+  margin: 0;           /* remove extra spacing */
+}
+
+/* Text below EXP bar matches LV 0 */
+.level-box > p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  color: #003049;
+}
+
+/* Horizontal divider line */
+.divider {
+  height: 2px;
+  background-color: #003049;  /* same color as text */
+  margin: 6px 0;              /* some vertical spacing */
+  border-radius: 1px;
 }
