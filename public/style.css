@@ -11,57 +11,20 @@ body {
 .room {
   width: 400px;
   height: 700px;
-  background-color: #EAE2B7; /* Cream */
+  background-image: url('assets/background.png');
+  background-size: contain;       
+  background-position: center;    
+  background-repeat: no-repeat;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
 }
 
-/* Window */
-.window {
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(#FCBF49, #87ceeb);
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 8px solid #003049;
-  border-radius: 10px;
-}
-
-.window-cross {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.window-cross::before,
-.window-cross::after {
-  content: "";
-  position: absolute;
-  background-color: #003049;
-}
-
-.window-cross::before {
-  width: 100%;
-  height: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.window-cross::after {
-  height: 100%;
-  width: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 /* Level Box */
 .level-box {
   position: absolute;
-  top: 30px;
-  left: 20px;
+  top: 70px;
+  right: 5px;
   background-color: #EAE2B7;
   border: 3px solid #F77F00;
   color: #003049; 
@@ -94,35 +57,6 @@ body {
   background-color: #FCBF49;
   border-radius: 10px;
   margin: 0;
-}
-
-/* Carpet */
-.carpet {
-  width: 200px;
-  height: 100px;
-  background-color: #D62828;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 140px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.8;
-}
-
-/* Bottom Navigation */
-.bottom-nav {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.nav-box {
-  width: 60px;
-  height: 60px;
-  background-color: #F77F00;
-  border-radius: 15px;
 }
 
 /* Tighten spacing for the text below the EXP bar */
@@ -166,7 +100,15 @@ body {
 /* Horizontal divider line */
 .divider {
   height: 2px;
-  background-color: #003049;  /* same color as text */
-  margin: 6px 0;              /* some vertical spacing */
+  background-color: #003049;  
+  margin: 6px 0;              
+  border-radius: 1px;
+}
+
+/* Horizontal divider line */
+.divider {
+  height: 2px;
+  background-color: #003049;  
+  margin: 6px 0;              
   border-radius: 1px;
 }
