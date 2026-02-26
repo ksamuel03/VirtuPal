@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #003049; /* Deep navy */
+  background-color: #003049; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@ body {
 .level-stats {
   display: flex;
   align-items: center;
-  gap: 6px; /* space between LV text and bar */
+  gap: 6px; 
 }
 
 .level-stats p {
@@ -52,7 +52,7 @@ body {
 
 /* EXP bar */
 .exp-bar {
-  width: 60px; /* fixed width keeps box small */
+  width: 60px; 
   height: 10px;
   background-color: #FCBF49;
   border-radius: 10px;
@@ -61,19 +61,19 @@ body {
 
 /* Tighten spacing for the text below the EXP bar */
 .level-box > p {
-  margin: 0;          /* Remove default paragraph spacing */
-  font-size: 12px;    /* Optional smaller font for neatness */
+  margin: 0;          
+  font-size: 12px;    
 }
 
 /* LV 0 and EXP bar side by side */
 .level-stats {
   display: flex;
   align-items: center;
-  gap: 6px;           /* space between LV text and bar */
+  gap: 6px;         
 }
 
 .level-stats p {
-  margin: 0;           /* remove default spacing */
+  margin: 0;           
   font-weight: bold;
   font-size: 12px;
   display: inline-block;
@@ -86,7 +86,7 @@ body {
   height: 10px;
   background-color: #FCBF49;
   border-radius: 10px;
-  margin: 0;           /* remove extra spacing */
+  margin: 0;        
 }
 
 /* Text below EXP bar matches LV 0 */
@@ -111,4 +111,13 @@ body {
   background-color: #003049;  
   margin: 6px 0;              
   border-radius: 1px;
+}
+
+.character{
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: auto;
 }
