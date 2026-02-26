@@ -5,7 +5,7 @@ VirtuPal is a fun, Tamagotchi-style focus app where you take care of a little vi
 Installation & Running:
 
 ```bash
-git clone https://github.com/yourusername/virtupal.git
+git clone https://github.com/ksamuel03/virtupal.git
 cd virtupal
 npm install
 npm start
